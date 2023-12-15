@@ -24,7 +24,81 @@
     <meta name="twitter:site" content="@foxxo_studio" />
 
     <title>Clean Ocean - MoreLifeLessTrash</title>
+    <link rel="icon" href="https://foxxo.studio/images/foxxo.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#" class="nav_link">Home</a></li>
+        <li><dot /></li>
+        <li><a href="#" class="nav_link">Donate</a></li>
+        <li><dot /></li>
+        <li><a href="#" class="nav_link">Gallery</a></li>
+        <li><dot /></li>
+        <li><a href="#" class="nav_link">The Problem</a></li>
+        <li><dot /></li>
+        <li><a href="#" class="nav_link">Projects</a></li>
+      </ul>
+    </nav>
+    <section id="lndg">
+      <img
+        src="https://www.thoughtco.com/thmb/XRS8J7vnB3Vx6KRaElWO5fzzg1Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/blue-runners--947498612-5c634cd3c9e77c0001566e32.jpg"
+        alt=""
+        class="lndg_img"
+      />
+      <h1>Clean Ocean</h1>
+      <h2>Lets Make The Ocean Clean Again</h2>
+      <button>Learn More</button>
+    </section>
+    <section id="dnt">
+      <div>
+        <h3>Donate</h3>
+        <p>
+          Do you like 3D printing or own a 3D printer? Do you know how you can
+          save the ocean using one of these? If not, I am going to tell you
+          right now! You can use pure blended plastics from bottles or you can
+          buy a machine that will melt these plastics to 3D fillament!
+        </p>
+      </div>
+      <iframe
+        src="https://oceanconservancy.org/"
+        title="Ocean Conservatory Website"
+        onclick="window.open('https://oceanconservancy.org/', '_blank');"
+      >
+      </iframe>
+      <img src="assets/no1.svg" alt="This Is the No1 Website!" class="arrow" />
+    </section>
+  </body>
+  <script>
+    window.addEventListener('scroll', () => {
+      const verticalScrollPx = window.scrollY || window.pageYOffset;
+
+      console.log(verticalScrollPx);
+
+      if (verticalScrollPx > 150) {
+        document.querySelector('nav').style.backgroundColor = '#fff';
+        document.querySelectorAll('nav a').forEach((e) => {
+          e.style.color = '#000';
+        });
+        document.querySelectorAll('nav dot').forEach((e) => {
+          e.style.backgroundColor = '#000';
+        });
+        document.querySelectorAll('nav a::after').forEach((e) => {
+          e.style.backgroundColor = '#000';
+        });
+      } else if (verticalScrollPx < 150) {
+        document.querySelector('nav').style.backgroundColor = 'transparent';
+        document.querySelectorAll('nav a').forEach((e) => {
+          e.style.color = '#fff';
+        });
+        document.querySelectorAll('nav dot').forEach((e) => {
+          e.style.backgroundColor = '#fff';
+        });
+        document.querySelectorAll('nav a::after').forEach((e) => {
+          e.style.backgroundColor = '#fff';
+        });
+      }
+    });
+  </script>
 </html>
